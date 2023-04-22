@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/sse/([a-zA-Z0-9_-]+)$ /BiometricPhp/app/api/api.php?token=$1 [L]
+RewriteRule ^api/(.*)$ /BiometricPhp/app/api/api.php/$1 [L]
+RewriteRule ^web/get-finger/([a-zA-Z0-9_-]+)$ /BiometricPhp/app/web/web.php?user_id=$1 [L]
+RewriteRule ^web/ssejs/([a-zA-Z0-9_-]+)$ /BiometricPhp/app/web/web.php?token=$1 [L]
+RewriteRule ^web/(.*)$ /BiometricPhp/app/web/web.php/$1 [L]
+
